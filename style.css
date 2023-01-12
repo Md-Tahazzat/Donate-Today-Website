@@ -7,71 +7,74 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.title {
+  margin: 1.5rem 0;
+  font-size: clamp(1.2rem, 5vw, 3.125rem);
+  font-weight: 700;
+}
+
 .btn-primary {
   background: #ff5959;
-  font-weight: 700;
+  font-weight: 500;
+  padding: 5px 10px;
   color: white;
-  font-size: 30px;
-  padding: 15px 20px;
+  font-size: 1rem;
   border: 0;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
-.title {
-  margin: 15px 0;
-  font-size: 50px;
-  font-weight: 700;
+/* header-section */
+.header {
+  height: 17rem;
 }
-
-/* header section */
 
 .header-banner {
-  color: white;
-  text-align: center;
-  width: 100%;
-  height: 100vh;
-  padding: 200px 300px;
+  padding: 1rem;
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(rgba(104, 104, 104, 0.048), rgba(0, 0, 0, 0.968));
+  background: linear-gradient(
+    rgba(104, 104, 104, 0.048),
+    rgba(48, 48, 48, 0.968)
+  );
 }
+
 .banner-title {
-  font-size: 70px;
+  font-size: clamp(1rem, 7vw, 4.375rem);
 }
 .banner-description {
-  font-size: 25px;
-  padding: 20px 100px;
+  color: white;
+  font-size: clamp(1rem, 3vw, 1.563rem);
+  padding: 1rem 0;
   font-weight: 300;
 }
-.banner-btn {
-  margin: 20px auto;
-}
 
-/* donate-amount section */
+/* donate amount section */
 .donate-amount {
-  padding: 200px 350px;
+  padding: 1rem 1rem;
 }
-
 .amount-title {
   text-align: center;
 }
 .amount-description {
-  text-align: center;
   color: lightslategray;
-  font-size: 25px;
-  margin: 15px 10px;
+  font-size: clamp(1rem, 3vw, 1.563rem);
+  text-align: left;
+  margin: 1rem 0;
   font-weight: 400;
 }
+
 .amounts {
   display: flex;
-  justify-content: space-between;
-  margin: 50px 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 1.4rem 0;
 }
 .amount {
   background: rgb(237, 237, 237);
-  padding: 50px 30px;
-  font-size: 30px;
+  padding: 1rem 1.5rem;
+  margin: 1rem auto;
+  font-size: 1rem;
   letter-spacing: 1px;
   color: lightslategray;
   border-radius: 5px;
@@ -79,47 +82,50 @@
   border: 2px solid rgb(237, 237, 237);
   transition: 0.2s;
 }
-
-.amount:hover {
-  border: 2px solid #ff5959;
-  color: #ff5959;
-  background: #f9bfbf55;
-}
 .other-amount {
   text-align: center;
   margin: 10px;
   font-weight: 400;
   color: rgba(160, 173, 185, 0.817);
 }
-.donate-btn {
-  margin: 40px auto;
-  text-align: center;
+
+.amount:hover {
+  border: 2px solid #ff5959;
+  color: #ff5959;
+  background: #f9bfbf55;
+}
+.donate-amount .donate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .donate-amount hr {
+  margin: 1.5rem auto;
   color: lightslategray;
 }
 
-/* donate plan section */
+/* donate-plan sections styles */
 .donate-plan {
-  margin: 0px 200px;
+  margin: 0 1rem;
 }
 .donate-title {
   text-align: center;
-  margin: 20px 0;
 }
 .donate-description {
   text-align: center;
-  font-size: 25px;
-  padding: 20px 200px;
+  font-size: clamp(1rem, 3vw, 1.563rem);
   font-weight: 300;
 }
 .items {
   display: flex;
+  gap: 1rem;
+  flex-direction: column;
   margin: 30px 0;
   justify-content: space-between;
 }
 .item {
-  padding: 50px 25px;
+  padding: 1rem;
+  border-radius: 10px;
   margin: 15px;
 }
 
@@ -135,7 +141,7 @@
 .item img {
   width: 60px;
   height: 60px;
-  margin: 15px 0;
+  margin: 15px auto;
 }
 .item-title {
   margin-bottom: 20px;
@@ -147,57 +153,61 @@
 }
 
 /* contribute section's styles */
-.contribution {
-  margin: 100px 150px;
+.contribution-fast,
+.contribution-last {
+  margin: 1.5rem 1rem;
   display: flex;
+  flex-direction: column;
 }
 .contributes-details {
-  margin: 50px;
-  width: 40%;
+  margin: 0.5rem;
+  width: calc(100%-0.5rem);
 }
 .details-description {
   text-align: left;
-  font-size: 25px;
-  padding: 10px 0px;
+  padding: 0.6rem 0;
+  font-size: clamp(1rem, 3vw, 1.563rem);
   font-weight: 300;
 }
 .contributes-img {
-  width: 40%;
+  margin: 1rem 0.5rem;
+  width: calc(100%-0.5rem);
   border-radius: 7px;
-  margin: 50px;
 }
 .contributes-details .details-btn {
-  margin: 30px 0;
+  margin: 1.2rem 0;
 }
 
 /* update-sections styles */
 .update {
-  margin: 50px 350px;
+  margin: 1rem;
 }
 
 .update-title {
   text-align: center;
-  margin: 20px 0;
+  margin: 1.25rem 0;
 }
 
 .update-description {
   color: lightslategray;
-  font-size: 25px;
-  font-weight: 400;
-  margin: 10px 30px;
-  text-align: center;
+  margin: 1rem 0;
+  text-align: left;
+  padding: 0.6rem 0;
+  font-size: clamp(1rem, 3vw, 1.563rem);
+  font-weight: 300;
 }
 
 .input-box {
-  padding: 100px 200px;
-  margin: 50px 0;
+  padding: 2rem 0.5rem;
+  margin: 3.125rem 0;
   background: rgb(250, 250, 201);
   display: flex;
   align-items: center;
+  width: calc(100%-0.5rem);
 }
 .input-box input {
-  font-size: 20px;
-  padding: 12px;
+  font-size: 1.25rem;
+  padding: 0.75rem;
   border: none;
   border-radius: 5px 0 0 5px;
   background-color: lightgray;
@@ -206,20 +216,20 @@
   outline: none;
 }
 .input-box button {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: white;
   font-weight: 500;
   background-color: #ff5959;
-  padding: 12px 40px;
+  padding: 0.75rem 1rem;
   border: none;
   border-radius: 0 5px 5px 0;
 }
 
 /* footer styles */
 .footer {
-  margin-top: 50px;
+  margin-top: 3.125rem;
   background-color: rgb(14, 14, 14);
-  padding: 60px;
+  padding: 3.125rem;
 }
 .footer-title {
   text-align: center;
@@ -233,4 +243,172 @@
   margin: 10px 0;
   text-align: center;
   color: lightgray;
+}
+
+/* responsive styles... */
+@media screen and (min-width: 992px) {
+  .btn-primary {
+    font-weight: 700;
+    font-size: 1.87rem;
+    padding: 15px 20px;
+    border-radius: 8px;
+  }
+
+  /* header section */
+  .header {
+    background-image: url("./images/donation8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh !important;
+  }
+  .banner-description {
+    padding: 20px 100px;
+  }
+  .banner-btn {
+    margin: 20px auto;
+  }
+
+  /* donate-amount section */
+  .donate-amount {
+    padding: 200px 350px;
+  }
+
+  .amount-title {
+    text-align: center;
+  }
+  .amount-description {
+    text-align: center;
+    margin: 15px 10px;
+    font-weight: 400;
+  }
+  .amounts {
+    justify-content: space-between;
+    margin: 50px 0;
+  }
+  .amount {
+    margin: 0;
+    padding: 50px 30px;
+    font-size: 30px;
+  }
+
+  .amount:hover {
+    border: 2px solid #ff5959;
+    color: #ff5959;
+    background: #f9bfbf55;
+  }
+
+  /* donate plan section */
+  .donate-plan {
+    margin: 0px 200px;
+  }
+
+  .donate-description {
+    padding: 20px 200px;
+  }
+  .items {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .item {
+    padding: 50px 25px;
+    margin: 15px;
+  }
+
+  .food {
+    background: rgb(229, 239, 240);
+  }
+  .shelter {
+    background: rgb(232, 221, 234);
+  }
+  .education {
+    background: rgb(250, 250, 201);
+  }
+  .item img {
+    width: 60px;
+    height: 60px;
+    margin: 15px 0;
+  }
+  .item-title {
+    margin-bottom: 20px;
+  }
+  .item-description {
+    color: lightslategray;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  /* contribute section's styles */
+  .contribution-fast {
+    margin: 100px 150px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .contribution-last {
+    margin: 100px 150px;
+    display: flex;
+    flex-direction: row;
+  }
+  .contributes-details {
+    margin: 50px;
+    width: 40%;
+  }
+  .details-description {
+    text-align: left;
+    font-size: 25px;
+    padding: 10px 0px;
+    font-weight: 300;
+  }
+  .contributes-img {
+    width: 40%;
+    border-radius: 7px;
+    margin: 50px;
+  }
+  .contributes-details .details-btn {
+    margin: 30px 0;
+  }
+
+  /* update section */
+  .update {
+    margin: 50px 350px;
+  }
+
+  .update-title {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .update-description {
+    color: lightslategray;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 10px 30px;
+    text-align: center;
+  }
+
+  .input-box {
+    padding: 100px 200px;
+    margin: 50px 0;
+    background: rgb(250, 250, 201);
+    display: flex;
+    align-items: center;
+  }
+  .input-box input {
+    font-size: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: lightgray;
+  }
+  .input-box input:focus {
+    outline: none;
+  }
+  .input-box button {
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    background-color: #ff5959;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+  }
 }
