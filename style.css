@@ -1,9 +1,12 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .btn-primary {
   background: #ff5959;
   font-weight: 700;
@@ -21,12 +24,7 @@
 }
 
 /* header section */
-.header {
-  background-image: url("/images/donation8.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
+
 .header-banner {
   color: white;
   text-align: center;
